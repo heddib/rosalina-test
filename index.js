@@ -1,10 +1,11 @@
 const io = require('socket.io-client');
 
 let socket = io('wss://rosalina-server.herokuapp.com/')
+// let socket = io('http://127.0.0.1:3000/')
 
 socket.on('connect', function () {
     console.log('Connected to Rosalina')
-    socket.emit('join', 'Rosalina (Test)')
+    socket.emit('join', 'Rosalina')
 
 var standard_input = process.stdin;
 
